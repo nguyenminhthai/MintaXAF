@@ -114,6 +114,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\SwitchLanguageLogonController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SwitchLanguageLogonController.Designer.cs">
+      <DependentUpon>SwitchLanguageLogonController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extension\CommonExtension.cs" />
     <Compile Include="Extension\FriendlyUrl\FriendlyUrlHttpRequestManager.cs" />
     <Compile Include="WebModule.cs">
@@ -125,7 +131,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controllers\SwitchLanguageLogonController.resx">
+      <DependentUpon>SwitchLanguageLogonController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="WebModule.resx">
       <DependentUpon>WebModule.cs</DependentUpon>
       <SubType>Designer</SubType>

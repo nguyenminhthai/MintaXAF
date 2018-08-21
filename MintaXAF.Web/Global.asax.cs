@@ -26,10 +26,16 @@ namespace MintaXAF.Web {
             Tracing.Initialize();
             WebApplication.SetInstance(Session, new MintaXAFAspNetApplication());
             DevExpress.ExpressApp.Web.Templates.DefaultVerticalTemplateContentNew.ClearSizeLimit();
-            WebApplication.Instance.SwitchToNewStyle();
-            if(ConfigurationManager.ConnectionStrings["ConnectionString"] != null) {
+            DeviceCategory deviceCategory = DeviceDetector.Instance.GetDeviceCategory();
+            // Hiển thị giao diện theo thiết bị client            
+            if (deviceCategory == DeviceCategory.Mobile || deviceCategory == DeviceCategory.Tablet)
+            {   
+                WebApplication.Instance.SwitchToNewStyle();
+            }            
+            if (ConfigurationManager.ConnectionStrings["ConnectionString"] != null)
+            {
                 WebApplication.Instance.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            }
+            }            
 #if EASYTEST
             if(ConfigurationManager.ConnectionStrings["EasyTestConnectionString"] != null) {
                 WebApplication.Instance.ConnectionString = ConfigurationManager.ConnectionStrings["EasyTestConnectionString"].ConnectionString;
