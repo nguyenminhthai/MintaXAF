@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="MintaXAF">
-  <Options>
+  <Options EnableFriendlyUrl="True">
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
-  <Views>
-  </Views>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="18.1.3.0" IsNewNode="True" />
+  </SchemaModules>
 </Application>

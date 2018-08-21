@@ -100,6 +100,7 @@
     <Reference Include="DevExpress.Xpo.v18.1">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System">
       <Private>False</Private>
     </Reference>
@@ -113,6 +114,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extension\CommonExtension.cs" />
+    <Compile Include="Extension\FriendlyUrl\FriendlyUrlHttpRequestManager.cs" />
     <Compile Include="WebModule.cs">
       <SubType>Component</SubType>
     </Compile>

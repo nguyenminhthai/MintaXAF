@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using DevExpress.ExpressApp.Xpo;
 using DevExpress.ExpressApp.Security;
 using DevExpress.ExpressApp.Security.ClientServer;
+using MintaXAF.Module.Web.Extension;
 
 namespace MintaXAF.Web {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/DevExpressExpressAppWebWebApplicationMembersTopicAll.aspx
@@ -133,5 +134,7 @@ namespace MintaXAF.Web {
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
+
+        protected override IHttpRequestManager CreateHttpRequestManager() => this.NewHttpRequestManager();
     }
 }

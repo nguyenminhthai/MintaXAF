@@ -16,6 +16,7 @@ using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.ExpressApp.Xpo;
+using MintaXAF.Module.Extension.FriendlyUrl;
 
 namespace MintaXAF.Module {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
@@ -35,6 +36,17 @@ namespace MintaXAF.Module {
         public override void CustomizeTypesInfo(ITypesInfo typesInfo) {
             base.CustomizeTypesInfo(typesInfo);
             CalculatedPersistentAliasHelper.CustomizeTypesInfo(typesInfo);
+        }
+
+        public override void ExtendModelInterfaces(DevExpress.ExpressApp.Model.ModelInterfaceExtenders extenders)
+        {
+            base.ExtendModelInterfaces(extenders);
+            #region Friendly Url
+            extenders.Add<IModelView, IModelViewFriendlyUrl>();
+            extenders.Add<IModelDetailView, IModelDetailViewFriendlyUrl>();
+            extenders.Add<IModelOptions, IModelOptionsFriendlyUrl>();
+            #endregion
+
         }
     }
 }
