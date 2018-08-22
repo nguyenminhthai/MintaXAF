@@ -1,2 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application />
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="DialogClose" Caption="Đóng" />
+      <Action Id="Logoff" Caption="Đăng xuất" />
+      <Action Id="Logon" Caption="Đăng nhập" />
+      <Action Id="SaveAndClose" Caption="Lưu và đóng" />
+    </Actions>
+  </ActionDesign>
+  <Localization>
+    <LocalizationGroup Name="DialogButtons">
+      <LocalizationItem Name="Close" Value="Đóng" />
+    </LocalizationGroup>
+  </Localization>
+</Application>

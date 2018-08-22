@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SizeFunction.Description" xml:space="preserve">
+    <value>Size()
+Trả về số lượng hàng trong cửa sổ.</value>
+  </data>
+  <data name="StdDevAggregate.Description" xml:space="preserve">
+    <value>StdDev(Value)
+Trả về ước tính độ lệch chuẩn của một số người, nơi các mẫu là một tập con của toàn dân.</value>
+  </data>
+  <data name="StdDevpAggregate.Description" xml:space="preserve">
+    <value>StdDevp(Value)
+Trả về độ lệch chuẩn của một số người, nơi có dân số là toàn bộ dữ liệu phải được tóm tắt.</value>
+  </data>
+  <data name="TotalFunction.Description" xml:space="preserve">
+    <value>Total(SummaryExpression)
+Trả về tổng số cho các biểu hiện cụ thể trong một cửa sổ bảng tính.</value>
+  </data>
+  <data name="VarAggregate.Description" xml:space="preserve">
+    <value>Var(Value)
+Trả về một ước tính của phương sai của một số người, nơi các mẫu là một tập con của toàn dân.</value>
+  </data>
+  <data name="VarpAggregate.Description" xml:space="preserve">
+    <value>Varp(Value)
+Trả về phương sai của một số người, nơi có dân số là toàn bộ dữ liệu phải được tóm tắt.</value>
+  </data>
+  <data name="WindowAvgFunction.Description" xml:space="preserve">
+    <value>WindowAvg (SummaryExpression, StartOffset, EndOffset)
+Trở về trung bình của các biểu hiện trong cửa sổ được xác định bằng cách sử dụng các offsets từ dòng hiện tại.</value>
+  </data>
+  <data name="WindowCountDistinctFunction.Description" xml:space="preserve">
+    <value>WindowCountDistinct (SummaryExpression, StartOffset, EndOffset)
+Trở về tính khác biệt của các biểu hiện trong cửa sổ.</value>
+  </data>
+  <data name="WindowCountFunction.Description" xml:space="preserve">
+    <value>WindowCount (SummaryExpression, StartOffset, EndOffset)
+Trở lại đếm các biểu hiện trong cửa sổ.</value>
+  </data>
+  <data name="WindowFunctions.Text" xml:space="preserve">
+    <value>Chức năng cửa sổ</value>
+  </data>
+  <data name="WindowMaxFunction.Description" xml:space="preserve">
+    <value>WindowMax (SummaryExpression, StartOffset, EndOffset)
+Trả về tối đa là biểu hiện trong cửa sổ.</value>
+  </data>
+  <data name="WindowMedianFunction.Description" xml:space="preserve">
+    <value>WindowMedian (SummaryExpression, StartOffset, EndOffset)
+Trở về trung bình của các biểu hiện trong cửa sổ.</value>
+  </data>
+  <data name="WindowMinFunction.Description" xml:space="preserve">
+    <value>WindowMin (SummaryExpression, StartOffset, EndOffset)
+Quay lại tối thiểu sự biểu hiện trong cửa sổ.</value>
+  </data>
+  <data name="WindowStdDevFunction.Description" xml:space="preserve">
+    <value>WindowStdDev (SummaryExpression, StartOffset, EndOffset)
+Trả về độ lệch chuẩn mẫu biểu hiện trong cửa sổ.</value>
+  </data>
+  <data name="WindowStdDevpFunction.Description" xml:space="preserve">
+    <value>WindowStdDevp (SummaryExpression, StartOffset, EndOffset)
+Trả lại thiên vị tiêu chuẩn độ lệch của các biểu hiện trong cửa sổ.</value>
+  </data>
+  <data name="WindowSumFunction.Description" xml:space="preserve">
+    <value>WindowSum (SummaryExpression, StartOffset, EndOffset)
+Trả về số tiền của các biểu hiện trong cửa sổ.</value>
+  </data>
+  <data name="WindowVarFunction.Description" xml:space="preserve">
+    <value>WindowVar (SummaryExpression, StartOffset, EndOffset)
+Trả về phương sai của các biểu hiện trong cửa sổ.</value>
+  </data>
+  <data name="WindowVarpFunction.Description" xml:space="preserve">
+    <value>WindowVarp (SummaryExpression, StartOffset, EndOffset)
+Trả về phương sai thiên vị của các biểu hiện trong cửa sổ.</value>
+  </data>
+  <data name="RunningAvgFunction.Description" xml:space="preserve">
+    <value>RunningAvg(SummaryExpression)
+Trả về các hoạt động trung bình của các biểu thức được chỉ định từ dòng đầu tiên trong cửa sổ để hàng hiện tại.</value>
+  </data>
+  <data name="RunningCountFunction.Description" xml:space="preserve">
+    <value>RunningCount(SummaryExpression)
+Trở lại đếm các biểu hiện cụ thể, chạy từ dòng đầu tiên trong cửa sổ dòng hiện tại.</value>
+  </data>
+  <data name="RunningMaxFunction.Description" xml:space="preserve">
+    <value>RunningMax(SummaryExpression)
+Trả về các hoạt động tối đa của biểu thức được chỉ định từ dòng đầu tiên trong cửa sổ để dòng hiện tại.</value>
+  </data>
+  <data name="RunningMinFunction.Description" xml:space="preserve">
+    <value>RunningMin(SummaryExpression)
+Trả về các hoạt động tối thiểu của biểu thức được chỉ định từ dòng đầu tiên trong cửa sổ để dòng hiện tại.</value>
+  </data>
+  <data name="RunningSumFunction.Description" xml:space="preserve">
+    <value>RunningSum(SummaryExpression)
+Trở về tổng biểu quy định, chạy từ dòng đầu tiên trong cửa sổ dòng hiện tại.</value>
+  </data>
+  <data name="RankModifiedFunction.Description" xml:space="preserve">
+    <value>RankModified (SummaryExpression, ['asc', 'desc'])
+Trở về xếp hạng lần cạnh tranh cho các dòng hiện thời trong cửa sổ.</value>
+  </data>
+  <data name="RankPercentileFunction.Description" xml:space="preserve">
+    <value>RankPercentile (SummaryExpression, ['asc', 'desc'])
+Trả về hàm percentile cho dòng hiện thời trong cửa sổ.</value>
+  </data>
+  <data name="RankUniqueFunction.Description" xml:space="preserve">
+    <value>RankUnique (SummaryExpression, ['asc', 'desc'])
+Trở về xếp hạng duy nhất cho dòng hiện thời trong cửa sổ.</value>
+  </data>
+  <data name="Fields Description Prefix" xml:space="preserve">
+    <value>Các loại hình của lĩnh vực này là:</value>
+  </data>
+</root>

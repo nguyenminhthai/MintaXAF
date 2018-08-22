@@ -9,6 +9,7 @@ using DevExpress.Persistent.BaseImpl;
 using DevExpress.ExpressApp.Security;
 using DevExpress.ExpressApp.Web;
 using DevExpress.Web;
+using System.Collections.Generic;
 
 namespace MintaXAF.Web {
     public class Global : System.Web.HttpApplication {
@@ -27,11 +28,19 @@ namespace MintaXAF.Web {
             WebApplication.SetInstance(Session, new MintaXAFAspNetApplication());
             DevExpress.ExpressApp.Web.Templates.DefaultVerticalTemplateContentNew.ClearSizeLimit();
             DeviceCategory deviceCategory = DeviceDetector.Instance.GetDeviceCategory();
-            // Hiển thị giao diện theo thiết bị client            
+
+            #region Hiển thị giao diện theo thiết bị client            
             if (deviceCategory == DeviceCategory.Mobile || deviceCategory == DeviceCategory.Tablet)
             {   
                 WebApplication.Instance.SwitchToNewStyle();
-            }            
+            }
+            #endregion
+
+            #region Cấu hình ngôn ngữ và định dạng mặc định
+            WebApplication.Instance.CustomizeLanguage += new EventHandler<CustomizeLanguageEventArgs>(Instance_CustomizeLanguage);
+            WebApplication.Instance.CustomizeFormattingCulture += new EventHandler<CustomizeFormattingCultureEventArgs>(Instance_CustomizeFormattingCulture);
+            #endregion
+
             if (ConfigurationManager.ConnectionStrings["ConnectionString"] != null)
             {
                 WebApplication.Instance.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
@@ -49,6 +58,27 @@ namespace MintaXAF.Web {
             WebApplication.Instance.Setup();
             WebApplication.Instance.Start();
         }
+
+        private void Instance_CustomizeFormattingCulture(object sender, CustomizeFormattingCultureEventArgs e)
+        {
+            e.FormattingCulture.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
+        }
+
+        private void Instance_CustomizeLanguage(object sender, CustomizeLanguageEventArgs e)
+        {
+            var currentLanguage = e.LanguageName;
+            List<string> availableLanguages = new List<string>();
+            string languagesValue = ConfigurationManager.AppSettings["Languages"];
+            if (languagesValue != null)
+            {
+                availableLanguages.AddRange(languagesValue.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries));
+            }
+            if (!availableLanguages.Contains(currentLanguage))
+            {
+                e.LanguageName = "vi";
+            }
+        }
+
         protected void Application_BeginRequest(Object sender, EventArgs e) {
         }
         protected void Application_EndRequest(Object sender, EventArgs e) {

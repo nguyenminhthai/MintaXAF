@@ -32,13 +32,19 @@ namespace MintaXAF.Win {
             if(ConfigurationManager.ConnectionStrings["ConnectionString"] != null) {
                 winApplication.ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
             }
+
+            #region Cấu hình ngôn ngữ và định dạng mặc định
+            winApplication.CustomizeLanguage += new EventHandler<CustomizeLanguageEventArgs>(Instance_CustomizeLanguage);
+            winApplication.CustomizeFormattingCulture += new EventHandler<CustomizeFormattingCultureEventArgs>(Instance_CustomizeFormattingCulture);
+            #endregion
+
 #if EASYTEST
             if(ConfigurationManager.ConnectionStrings["EasyTestConnectionString"] != null) {
                 winApplication.ConnectionString = ConfigurationManager.ConnectionStrings["EasyTestConnectionString"].ConnectionString;
             }
 #endif
 #if DEBUG
-            if(System.Diagnostics.Debugger.IsAttached && winApplication.CheckCompatibilityType == CheckCompatibilityType.DatabaseSchema) {
+            if (System.Diagnostics.Debugger.IsAttached && winApplication.CheckCompatibilityType == CheckCompatibilityType.DatabaseSchema) {
                 winApplication.DatabaseUpdateMode = DatabaseUpdateMode.UpdateDatabaseAlways;
             }
 #endif
@@ -49,6 +55,18 @@ namespace MintaXAF.Win {
             catch(Exception e) {
                 winApplication.HandleException(e);
             }
+        }
+
+        private static void Instance_CustomizeFormattingCulture(object sender, CustomizeFormattingCultureEventArgs e)
+        {
+            e.FormattingCulture.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
+        }
+
+        private static void Instance_CustomizeLanguage(object sender, CustomizeLanguageEventArgs e)
+        {
+            e.LanguageName = "vi";
+            //To use the default (English) language, use the following code line instead:
+            //Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("");
         }
     }
 }

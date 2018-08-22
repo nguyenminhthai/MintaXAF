@@ -277,4 +277,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>copy "$(SolutionDir)..\1.COMPONENT\Localize\vi\*.dll" "$(TargetDir)vi\</PreBuildEvent>
+  </PropertyGroup>
 </Project>
