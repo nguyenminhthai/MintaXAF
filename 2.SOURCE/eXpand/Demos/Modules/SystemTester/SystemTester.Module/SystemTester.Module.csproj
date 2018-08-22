@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F15837D-D1E5-44DC-92F0-4F2EBE9C3F8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SystemTester.Module</RootNamespace>
+    <AssemblyName>SystemTester.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags></FileUpgradeFlags>
+    <UpgradeBackupLocation></UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>0d93d223</NuGetPackageImportStamp>
+    <LangVersion>latest</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>latest</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommandLine">
+      <HintPath>..\..\..\..\Support\_third_party_assemblies\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.CloneObject.v18.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ScriptRecorder.v18.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.v18.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v18.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Export">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v18.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v18.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v18.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v18.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Fasterflect, Version=2.1.3.0, Culture=neutral, PublicKeyToken=38d18473284c1ca7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Support\_third_party_assemblies\Packages\fasterflect.2.1.3\lib\net40\Fasterflect.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Xpand.DLL\Xpand.ExpressApp.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.Security">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Xpand.DLL\Xpand.ExpressApp.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.Persistent.Base">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Xpand.DLL\Xpand.Persistent.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.Persistent.BaseImpl">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Xpand.DLL\Xpand.Persistent.BaseImpl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xpand.Utils">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Xpand.DLL\Xpand.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.Xpo">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Xpand.DLL\Xpand.Xpo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FunctionalTests\UnboundColumn\UnboundColumnObject.cs" />
+    <Compile Include="FunctionalTests\AutoCommit\AutoCommitObject.cs" />
+    <None Include="FunctionalTests\Actions\ClientScript.inc" />
+    <None Include="FunctionalTests\UnboundColumn\UnboundColumn.ets" />
+    <None Include="FunctionalTests\AutoCommit\ListView.inc" />
+    <Compile Include="FunctionalTests\EasyTestParameter.cs" />
+    <Compile Include="FunctionalTests\ModelAttributeValue\ModelAttributeValueObject.cs" />
+    <Compile Include="FunctionalTests\TrackModifiedProperties\TrackModifiedProperties.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FunctionalTests\TrackModifiedProperties\TrackModifiedPropertiesObject.cs" />
+    <Compile Include="FunctionalTests\SupressConfirmation\SupressConfirmationObject.cs" />
+    <Compile Include="FunctionalTests\NavigationItems\NavigationItemsObject.cs" />
+    <Compile Include="FunctionalTests\Actions\Actions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FunctionalTests\Actions\ActionsObject.cs" />
+    <Compile Include="FunctionalTests\ConditionalAppearence\ConditionalAppearenceObject.cs" />
+    <Compile Include="FunctionalTests\HideNavigationOnStartup\HideNavigationOnStartupObject.cs" />
+    <Compile Include="FunctionalTests\PositionInListView\PositionInListViewObject.cs" />
+    <Compile Include="FunctionalTests\HideToolBar\HideToolBarObject.cs" />
+    <Compile Include="FunctionalTests\MergedDifferences\MergedDifferencesObject.cs" />
+    <Compile Include="FunctionalTests\MySql\MySqlObject.cs" />
+    <Compile Include="FunctionalTests\PessimisticLocking\PessimisticLocking.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FunctionalTests\PessimisticLocking\PessimisticLockingObject.cs" />
+    <Compile Include="FunctionalTests\PreventDataLoading\PreventDataLoading.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FunctionalTests\PreventDataLoading\PreventDataLoadingObject.cs" />
+    <Compile Include="FunctionalTests\PropertyEditors\ChooseFromListCollectionEditor\ChooseFromListCollectionEditorObject.cs" />
+    <Compile Include="FunctionalTests\PropertyEditors\FilterableEnumPropertyEditor\FilterableEnumPropertyEditorObject.cs" />
+    <Compile Include="FunctionalTests\PropertyEditors\HyperLinkPropertyEditor\HyperLinkObject.cs" />
+    <Compile Include="FunctionalTests\RunTimeMembers\RunTimeMembersObject.cs" />
+    <Compile Include="FunctionalTests\RunTimeMembers\RuntimeMembersUpdater.cs" />
+    <Compile Include="FunctionalTests\SequenceGenerator\SequenceGeneratorObject.cs" />
+    <Compile Include="FunctionalTests\SqlLite\SqliteObject.cs" />
+    <Compile Include="FunctionalTests\ViewEditMode\ViewEditMode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FunctionalTests\ViewEditMode\ViewEditModeObject.cs" />
+    <Compile Include="FunctionalTests\XpandEasyTestController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DatabaseUpdate\Updater.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Module.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObjects\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controllers\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\AutoCommit\AutoCommit.ets" />
+    <None Include="FunctionalTests\AutoCommit\AutoCommit.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\AutoCommit\DetailView.inc" />
+    <None Include="FunctionalTests\AutoCommit\Init.inc" />
+    <None Include="FunctionalTests\ModelAttributeValue\ModelAttributeValue.ets" />
+    <None Include="FunctionalTests\ModelAttributeValue\ModelAttributeValue.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\TrackModifiedProperties\TrackModifiedProperties.ets" />
+    <None Include="FunctionalTests\TrackModifiedProperties\TrackModifiedProperties.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\SupressConfirmation\SupressConfirmation.ets" />
+    <None Include="FunctionalTests\SupressConfirmation\SupressConfirmation.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\NavigationItems\NavigationItems.ets" />
+    <None Include="FunctionalTests\NavigationItems\NavigationItems.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\Actions\Actions.ets" />
+    <None Include="FunctionalTests\Actions\Actions.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\ConditionalAppearence\ConditionalAppearence.ets" />
+    <None Include="FunctionalTests\ConditionalAppearence\ConditionalAppearence.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\EndUserAppearanceRule\EndUserAppearanceRule.ets" />
+    <None Include="FunctionalTests\EndUserAppearanceRule\EndUserAppearanceRule.xafml" />
+    <Content Include="FunctionalTests\UnboundColumn\Config.xml" />
+    <None Include="FunctionalTests\UnboundColumn\Init.inc" />
+    <Content Include="FunctionalTests\AutoCommit\Config.xml" />
+    <Content Include="FunctionalTests\HideNavigationOnStartup\Images\Navigation.win.mask.png" />
+    <Content Include="FunctionalTests\HideNavigationOnStartup\Images\Navigation.win.png" />
+    <Content Include="FunctionalTests\ModelAttributeValue\Config.xml" />
+    <Content Include="FunctionalTests\TrackModifiedProperties\Config.xml" />
+    <Content Include="FunctionalTests\SupressConfirmation\Config.xml" />
+    <Content Include="FunctionalTests\NavigationItems\Config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="FunctionalTests\HideNavigationOnStartup\Images\Navigation.web.mask.png" />
+    <Content Include="FunctionalTests\HideNavigationOnStartup\Images\Navigation.web.png" />
+    <None Include="FunctionalTests\HideNavigationOnStartup\HideNavigationOnStartup.ets" />
+    <EmbeddedResource Include="FunctionalTests\HideNavigationOnStartup\HideNavigationOnStartup.xafml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="FunctionalTests\PositionInListView\PositionInListView.ets" />
+    <None Include="FunctionalTests\PositionInListView\PositionInListView.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\HideToolBar\HideToolBar.ets" />
+    <None Include="FunctionalTests\HideToolBar\HideToolBar.xafml" />
+    <None Include="FunctionalTests\MergedDifferences\MergedDifferences.ets" />
+    <EmbeddedResource Include="FunctionalTests\MergedDifferences\MergedDifferences.xafml" />
+    <None Include="FunctionalTests\MySql\MySql.ets" />
+    <None Include="FunctionalTests\PessimisticLocking\PessimisticLocking.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\PessimisticLocking\PessimisticLocking.ets" />
+    <None Include="FunctionalTests\PreventDataLoading\PreventDataLoading.ets" />
+    <None Include="FunctionalTests\PreventDataLoading\PreventDataLoading.xafml" />
+    <None Include="FunctionalTests\PropertyEditors\ChooseFromListCollectionEditor\ChooseFromListCollectionEditor.ets" />
+    <None Include="FunctionalTests\PropertyEditors\FilterableEnumPropertyEditor\FilterableEnumPropertyEditor.ets" />
+    <None Include="FunctionalTests\PropertyEditors\HyperLinkPropertyEditor\HyperLinkPropertyEditor.ets" />
+    <None Include="FunctionalTests\PropertyEditors\HyperLinkPropertyEditor\HyperLinkPropertyEditor.xafml" />
+    <None Include="FunctionalTests\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\RunTimeMembers\ModelDifference\RunTimeMembersModelDifference.ets" />
+    <None Include="FunctionalTests\RunTimeMembers\RunTimeMembers.ets" />
+    <None Include="FunctionalTests\RunTimeMembers\RunTimeMembers.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\SequenceGenerator\SequenceGenerator.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\SequenceGenerator\SequenceGenerator.ets" />
+    <None Include="FunctionalTests\SqlLite\SqlLite.ets" />
+    <None Include="FunctionalTests\UnboundColumn\UnboundColumn.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\ViewEditMode\DetailView\ViewEditMode.xafml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FunctionalTests\ViewEditMode\DetailView\ViewMode\ViewMode.ets" />
+    <None Include="Images\ReadMe.txt" />
+    <None Include="packages.config" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FunctionalTests\Actions\Change Action item visibility from model.inc" />
+    <Content Include="FunctionalTests\Actions\Config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="FunctionalTests\Actions\Configure View Model.inc" />
+    <Content Include="FunctionalTests\Actions\Create action item from model.inc" />
+    <Content Include="FunctionalTests\Actions\DefaultValue.inc" />
+    <Content Include="FunctionalTests\Actions\Init.inc" />
+    <Content Include="FunctionalTests\Actions\Use a new action item to modify model .inc" />
+    <Content Include="FunctionalTests\EndUserAppearanceRule\Config.xml" />
+    <Content Include="FunctionalTests\HideNavigationOnStartup\Config.xml" />
+    <Content Include="FunctionalTests\NavigationItems\Init.inc" />
+    <Content Include="FunctionalTests\PositionInListView\Config.xml" />
+    <Content Include="FunctionalTests\MySql\Config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="FunctionalTests\PessimisticLocking\Config.xml" />
+    <Content Include="FunctionalTests\PessimisticLocking\Init.inc" />
+    <Content Include="FunctionalTests\PropertyEditors\FilterableEnumPropertyEditor\Config.xml" />
+    <Content Include="FunctionalTests\PropertyEditors\HyperLinkPropertyEditor\Images\HyperLinkPropertyEditor.win.png" />
+    <Content Include="FunctionalTests\RunTimeMembers\Config.xml" />
+    <Content Include="FunctionalTests\RunTimeMembers\ModelDifference\Config.xml" />
+    <Content Include="FunctionalTests\SequenceGenerator\Config.xml" />
+    <Content Include="FunctionalTests\ViewEditMode\DetailView\ViewMode\ViewMode.inc" />
+    <Content Include="FunctionalTests\SqlLite\Config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="FunctionalTests\ViewEditMode\DetailView\EditMode\Config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="FunctionalTests\ViewEditMode\DetailView\ViewMode\Config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="FunctionalTests\ViewEditMode\DetailView\ViewMode\Init.inc" />
+    <None Include="FunctionalTests\ViewEditMode\DetailView\EditMode\EditMode.ets" />
+    <None Include="FunctionalTests\ViewEditMode\DetailView\EditMode\Init.inc" />
+    <None Include="FunctionalTests\RunTimeMembers\AssociatedCollection.inc" />
+    <None Include="FunctionalTests\RunTimeMembers\OrphanedCollection.inc" />
+    <None Include="FunctionalTests\RunTimeMembers\Persistent.inc" />
+    <None Include="FunctionalTests\RunTimeMembers\NonPersistent.inc" />
+    <None Include="FunctionalTests\RunTimeMembers\Calculated.inc" />
+    <None Include="FunctionalTests\RunTimeMembers\Init.inc" />
+    <None Include="FunctionalTests\ConditionalAppearence\Font.inc" />
+    <Content Include="FunctionalTests\ConditionalAppearence\Config.xml" />
+    <None Include="FunctionalTests\ConditionalAppearence\Init.inc" />
+    <Content Include="FunctionalTests\ConditionalAppearence\Images\DetailView.BoldFont1.web.png" />
+    <Content Include="FunctionalTests\ConditionalAppearence\Images\DetailView.BoldFont1.win.png" />
+    <Content Include="FunctionalTests\ConditionalAppearence\Images\DetailView.BoldFont2.web.png" />
+    <Content Include="FunctionalTests\ConditionalAppearence\Images\DetailView.BoldFont2.win.png" />
+    <Content Include="FunctionalTests\ConditionalAppearence\Images\DetailView.DefaultFont.web.png" />
+    <Content Include="FunctionalTests\ConditionalAppearence\Images\DetailView.DefaultFont.win.png" />
+    <Content Include="FunctionalTests\ConditionalAppearence\Images\ListView.BoldFont.web.png" />
+    <Content Include="FunctionalTests\ConditionalAppearence\Images\ListView.BoldFont.win.png" />
+    <Content Include="FunctionalTests\Config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="FunctionalTests\HideToolBar\Config.xml" />
+    <Content Include="FunctionalTests\HideToolBar\Hide Toolbar from all Views.inc" />
+    <Content Include="FunctionalTests\HideToolBar\Images\DetailView.web.png" />
+    <Content Include="FunctionalTests\HideToolBar\Images\DetailView.win.png" />
+    <Content Include="FunctionalTests\HideToolBar\Images\ListView.web.png" />
+    <Content Include="FunctionalTests\HideToolBar\Images\ListView.Win.png" />
+    <Content Include="FunctionalTests\MergedDifferences\Config.xml" />
+    <Content Include="FunctionalTests\MergedDifferences\Init.inc" />
+    <Content Include="FunctionalTests\MergedDifferences\ListView Filters.inc" />
+    <Content Include="FunctionalTests\PreventDataLoading\Config.xml" />
+    <Content Include="FunctionalTests\PreventDataLoading\Filter By Text.inc" />
+    <Content Include="FunctionalTests\PreventDataLoading\Filter Not Empty.inc" />
+    <Content Include="FunctionalTests\PreventDataLoading\Filters Not Empty.inc" />
+    <Content Include="FunctionalTests\PreventDataLoading\Init.inc" />
+    <Content Include="FunctionalTests\PropertyEditors\ChooseFromListCollectionEditor\Config.xml" />
+    <Content Include="FunctionalTests\PropertyEditors\ChooseFromListCollectionEditor\Init.inc" />
+    <Content Include="FunctionalTests\PropertyEditors\HyperLinkPropertyEditor\Config.xml">
+      <SubType></SubType>
+    </Content>
+    <Content Include="FunctionalTests\PropertyEditors\HyperLinkPropertyEditor\Does not save a invalid url.inc" />
+    <Content Include="FunctionalTests\PropertyEditors\HyperLinkPropertyEditor\Images\HyperLinkPropertyEditor.web.png" />
+    <None Include="FunctionalTests\PropertyEditors\HyperLinkPropertyEditor\Init.inc" />
+    <Content Include="FunctionalTests\PropertyEditors\HyperLinkPropertyEditor\Save a valid url.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FunctionalTests\PropertyEditors\HyperLinkPropertyEditor\Images\ScreenCapture\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="..\..\..\..\Support\Build\Nuget.Targets" Condition="Exists('..\..\..\..\Support\Build\Nuget.Targets')" />
+</Project>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="MintaXAF">
+  <Options EnableFriendlyUrl="True">
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="18.1.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Branch_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="22.177419354838708">
+            <LayoutGroup Id="Branch" RelativeSize="100">
+              <LayoutItem Id="Title" ViewItem="Title" Index="0" RelativeSize="29.09090909090909" IsNewNode="True" />
+              <LayoutItem Id="Address" Index="1" RelativeSize="21.818181818181817" />
+              <LayoutGroup Id="Autoab3cbd05-bab9-4b5d-bf30-aa4c56adff7e" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="21.818181818181817" IsNewNode="True">
+                <LayoutItem Id="Telephone" ViewItem="Telephone" Index="0" RelativeSize="49.919743178170144" IsNewNode="True" />
+                <LayoutItem Id="Fax" ViewItem="Fax" Index="1" RelativeSize="50.080256821829856" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="Telephone" Index="2" RelativeSize="17.910447761194028" Removed="True" />
+              <LayoutItem Id="Email" Index="3" RelativeSize="27.272727272727273" />
+              <LayoutItem Id="Fax" Index="3" RelativeSize="17.910447761194028" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="MintaBaseObject" Caption="Title" Direction="Horizontal" RelativeSize="21.428571428571427" Removed="True">
+              <LayoutItem Id="Title" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Branch_ListView">
+      <Columns>
+        <ColumnInfo Id="Title" Index="0" Width="40" />
+        <ColumnInfo Id="Address" Index="1" Width="59" />
+        <ColumnInfo Id="Telephone" Index="2" />
+        <ColumnInfo Id="Fax" Index="3" Width="38" />
+        <ColumnInfo Id="Email" Index="4" Width="44" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Department_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="7.661290322580645">
+            <LayoutGroup Id="MintaBaseObject" Index="0" RelativeSize="100">
+              <LayoutItem Id="Title" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="92.338709677419359" Index="1">
+            <LayoutGroup Id="BranchCollection" ShowCaption="True" Caption="Branch Collection" Index="0" RelativeSize="100" IsNewNode="True" Removed="True">
+              <LayoutItem Id="BranchCollection" ViewItem="BranchCollection" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" Index="1" RelativeSize="100">
+              <LayoutItem Id="ChangeHistory" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

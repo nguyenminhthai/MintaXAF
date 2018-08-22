@@ -1,0 +1,11 @@
+﻿    $PROPERTYTYPE$ _$PROPERTYNAME$;
+    $TYPEATTRIBUTES$
+    public $PROPERTYTYPE$ $PROPERTYNAME${
+      get{
+        return _$PROPERTYNAME$;
+      }
+      set{
+        _$PROPERTYNAME$= value;
+        $INJECTCODE$
+      }
+    }

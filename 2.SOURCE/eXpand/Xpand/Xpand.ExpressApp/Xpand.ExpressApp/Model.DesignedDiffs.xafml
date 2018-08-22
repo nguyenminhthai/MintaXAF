@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application >
+  <ActionDesign>
+    <Actions>
+      <Action Id="ChooseFormattingCulture" Active="False" />
+      <Action Id="ChooseLanguage" Active="False" />
+      <Action Id="PositionDown" ImageName="Action_Sorting_Descending" />
+      <Action Id="PositionUp" ImageName="Action_Sorting_Ascending" />
+    </Actions>
+  </ActionDesign>
+</Application>
