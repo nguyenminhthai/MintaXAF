@@ -36,10 +36,10 @@ namespace MintaXAF.Web {
             }
             #endregion
 
-            #region Cấu hình ngôn ngữ và định dạng mặc định
-            WebApplication.Instance.CustomizeLanguage += new EventHandler<CustomizeLanguageEventArgs>(Instance_CustomizeLanguage);
-            WebApplication.Instance.CustomizeFormattingCulture += new EventHandler<CustomizeFormattingCultureEventArgs>(Instance_CustomizeFormattingCulture);
-            #endregion
+            //#region Cấu hình ngôn ngữ và định dạng mặc định
+            //WebApplication.Instance.CustomizeLanguage += new EventHandler<CustomizeLanguageEventArgs>(Instance_CustomizeLanguage);
+            //WebApplication.Instance.CustomizeFormattingCulture += new EventHandler<CustomizeFormattingCultureEventArgs>(Instance_CustomizeFormattingCulture);
+            //#endregion
 
             if (ConfigurationManager.ConnectionStrings["ConnectionString"] != null)
             {
@@ -59,25 +59,25 @@ namespace MintaXAF.Web {
             WebApplication.Instance.Start();
         }
 
-        private void Instance_CustomizeFormattingCulture(object sender, CustomizeFormattingCultureEventArgs e)
-        {
-            e.FormattingCulture.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
-        }
+        //private void Instance_CustomizeFormattingCulture(object sender, CustomizeFormattingCultureEventArgs e)
+        //{
+        //    e.FormattingCulture.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
+        //}
 
-        private void Instance_CustomizeLanguage(object sender, CustomizeLanguageEventArgs e)
-        {
-            var currentLanguage = e.LanguageName;
-            List<string> availableLanguages = new List<string>();
-            string languagesValue = ConfigurationManager.AppSettings["Languages"];
-            if (languagesValue != null)
-            {
-                availableLanguages.AddRange(languagesValue.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries));
-            }
-            if (!availableLanguages.Contains(currentLanguage))
-            {
-                e.LanguageName = "vi";
-            }
-        }
+        //private void Instance_CustomizeLanguage(object sender, CustomizeLanguageEventArgs e)
+        //{
+        //    var currentLanguage = e.LanguageName;
+        //    List<string> availableLanguages = new List<string>();
+        //    string languagesValue = ConfigurationManager.AppSettings["Languages"];
+        //    if (languagesValue != null)
+        //    {
+        //        availableLanguages.AddRange(languagesValue.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries));
+        //    }
+        //    if (!availableLanguages.Contains(currentLanguage))
+        //    {
+        //        e.LanguageName = "vi";
+        //    }
+        //}
 
         protected void Application_BeginRequest(Object sender, EventArgs e) {
         }

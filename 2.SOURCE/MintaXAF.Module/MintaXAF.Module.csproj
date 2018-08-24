@@ -101,6 +101,12 @@
     <Compile Include="BusinessObjects\Branch.cs" />
     <Compile Include="BusinessObjects\Department.cs" />
     <Compile Include="BusinessObjects\Employee.cs" />
+    <Compile Include="Controllers\SwitchLanguageLogonController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SwitchLanguageLogonController.Designer.cs">
+      <DependentUpon>SwitchLanguageLogonController.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Extension\FriendlyUrl\FriendlyUrlModel.cs" />
     <Compile Include="Module.cs">
@@ -144,6 +150,8 @@
     <None Include="FunctionalTests\config.xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Images\Flag_eng.png" />
+    <EmbeddedResource Include="Images\Flag_vn.png" />
     <Content Include="Welcome.html" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

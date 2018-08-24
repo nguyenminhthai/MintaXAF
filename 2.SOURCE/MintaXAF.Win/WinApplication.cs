@@ -59,5 +59,43 @@ namespace MintaXAF.Win {
             }
 #endif
         }
+        protected override void ShowLogonWindow(WinWindow popupWindow)
+        {
+            LogonWindow = popupWindow;
+            View logonView = LogonWindow.View;
+            LogonWindow.ViewChanging += new EventHandler<ViewChangingEventArgs>(LogonWindow_ViewChanging);
+            LogonWindow.SetView(null);
+            logonView.LoadModel();
+            LogonWindow.SetView(logonView);
+
+            base.ShowLogonWindow(popupWindow);
+        }
+        void LogonWindow_ViewChanging(object sender, ViewChangingEventArgs e)
+        {
+            LogonWindow.ViewChanging -= new EventHandler<ViewChangingEventArgs>(LogonWindow_ViewChanging);
+            e.DisposeOldView = false;
+        }
+        protected override void OnLoggedOn(LogonEventArgs args)
+        {
+            LogonWindow = null;
+            base.OnLoggedOn(args);
+        }
+        private bool userDifferencesLoaded = false;
+        protected override void OnSetupComplete()
+        {
+            base.OnSetupComplete();
+            userDifferencesLoaded = false;
+            LoadUserDifferences();
+            userDifferencesLoaded = true;
+            InitializeLanguage();
+        }
+        protected override void LoadUserDifferences()
+        {
+            if (!userDifferencesLoaded)
+            {
+                base.LoadUserDifferences();
+            }
+        }
+        public Window LogonWindow { get; set; }
     }
 }

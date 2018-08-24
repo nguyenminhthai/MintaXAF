@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application Title="MintaXAF">
+<Application Title="MintaXAF" PreferredLanguage="vi">
   <Options EnableFriendlyUrl="True">
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>

@@ -5,4 +5,32 @@
     <SchemaModule Name="SystemModule" Version="18.1.3.0" IsNewNode="True" />
     <SchemaModule Name="SystemWindowsFormsModule" Version="18.1.3.0" IsNewNode="True" />
   </SchemaModules>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView">
+      <Items>
+        <StaticImage Id="LogonImage" Caption="LogonImage(4)" />
+        <StaticText Id="LogonText" Caption="LogonText(7)" />
+        <ActionContainerViewItem Id="SwitchLanguageLogon" ActionContainer="SwitchLanguageLogon" Caption="SwitchLanguageLogon(11)" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="RootGroup" RelativeSize="100">
+            <LayoutGroup Id="ImageGroup" Caption="ImageGroup(3)" TextAlignMode="AlignWithChildren" RelativeSize="17.693836978131213">
+              <LayoutItem Id="LogonImage" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="EditorsGroup" RelativeSize="82.306163021868784">
+              <LayoutGroup Id="Text" Caption="Text(6)" TextAlignMode="AlignWithChildren" Direction="Horizontal" RelativeSize="8.2661290322580641">
+                <LayoutItem Id="LogonText" RelativeSize="66.425120772946855" SizeConstraintsType="Custom" MinSize="20, 41" />
+                <LayoutItem Id="SwitchLanguageLogon" ViewItem="SwitchLanguageLogon" Index="1" RelativeSize="33.574879227053138" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Editors" RelativeSize="91.733870967741936">
+                <LayoutItem Id="UserName" Index="0" RelativeSize="5.9340659340659343" />
+                <LayoutItem Id="Password" Index="1" RelativeSize="94.065934065934073" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
 </Application>

@@ -1,7 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="SwitchLanguageLogon" IsPostBackRequired="True" />
+    </Actions>
+  </ActionDesign>
   <SchemaModules>
     <SchemaModule Name="SystemAspNetModule" Version="18.1.3.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="18.1.3.0" IsNewNode="True" />
   </SchemaModules>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView">
+      <Items>
+        <StaticImage Id="LogonImage" Caption="LogonImage(4)" />
+        <StaticText Id="LogonText" Caption="LogonText(7)" />
+        <ActionContainerViewItem Id="SwitchLanguageLongon" ActionContainer="SwitchLanguageLogon" Caption="SwitchLanguageLongon(11)" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="RootGroup" RelativeSize="100">
+            <LayoutGroup Id="ImageGroup" Caption="ImageGroup(3)" RelativeSize="17.8714859437751">
+              <LayoutItem Id="LogonImage" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="EditorsGroup" RelativeSize="82.1285140562249">
+              <LayoutGroup Id="Text" Caption="Text(6)" Direction="Horizontal" RelativeSize="8.2661290322580641">
+                <LayoutItem Id="LogonText" RelativeSize="64.547677261613686" />
+                <LayoutItem Id="SwitchLanguageLongon" ViewItem="SwitchLanguageLongon" Index="1" RelativeSize="35.452322738386307" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Editors" RelativeSize="91.733870967741936">
+                <LayoutItem Id="UserName" Index="0" RelativeSize="5.9340659340659343" />
+                <LayoutItem Id="Password" Index="1" RelativeSize="94.065934065934073" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
 </Application>

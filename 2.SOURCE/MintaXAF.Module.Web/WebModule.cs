@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using DevExpress.ExpressApp.Updating;
 using DevExpress.Persistent.BaseImpl;
 
-
 namespace MintaXAF.Module.Web
 {
     [ToolboxItemFilter("Xaf.Platform.Web")]
