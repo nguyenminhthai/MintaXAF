@@ -6,27 +6,24 @@ namespace MintaXAF.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [NavigationItem("Dictionary")]
-    [ImageName("BO_Department")]
-    public class Department : MintaBaseObject
+    [ImageName("BO_Position")]
+    public class Position : MintaBaseObject
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        public Department(Session session)
+        public Position(Session session)
             : base(session)
         {
         }
 
-        [Association("Department-Branch")]
-        public XPCollection<Branch> BranchCollection => GetCollection<Branch>("BranchCollection");
-
-        [Association("Department-Employees")]
-        public XPCollection<Employee> EmployeeCollection => GetCollection<Employee>("EmployeeCollection");
+        public bool IsManager { get => GetPropertyValue<bool>("IsManager"); set => SetPropertyValue("IsManager", value); }
 
         [Association("Departments-Positions")]
-        public XPCollection<Position> PositionCollection => GetCollection<Position>("PositionCollection");
-
+        public XPCollection<Department> Departments=> GetCollection<Department>("Departments");
+        
         public override void AfterConstruction()
         {
             base.AfterConstruction();
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
+        
     }
 }

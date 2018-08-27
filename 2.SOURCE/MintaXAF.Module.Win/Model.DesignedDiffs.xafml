@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
+  <NavigationItems NavigationStyle="TreeList" RootGroupsStyle="OutlookAnimated" DefaultChildItemsDisplayStyle="List" />
+  <Options UIType="TabbedMDI" />
   <SchemaModules>
     <SchemaModule Name="SystemModule" Version="18.1.3.0" IsNewNode="True" />
     <SchemaModule Name="SystemWindowsFormsModule" Version="18.1.3.0" IsNewNode="True" />

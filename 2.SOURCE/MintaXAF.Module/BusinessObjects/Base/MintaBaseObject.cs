@@ -15,7 +15,7 @@ namespace MintaXAF.Module.BusinessObjects.Base
     [ListViewFilter("Available","[UseFlag]=true",true,Index =1)]
     [ListViewFilter("Unavailable", "[UseFlag]=false", Index = 2)]
     [Appearance("UseFlagColoredInListView",AppearanceItemType ="ViewItem",TargetItems ="*",
-        Criteria ="UseFlag=false",Context ="ListView", FontStyle =FontStyle.Strikeout,FontColor ="ForestGreen",Priority =1)]
+        Criteria ="UseFlag=false",Context ="ListView", FontStyle =FontStyle.Strikeout,FontColor ="Crimson",Priority =1)]
     public abstract class MintaBaseObject : BaseObject
     {
         protected const string EmailRegularExpression = "^[a-z0-9_\\+-]+(\\.[a-z0-9_\\+-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*\\.([a-z]{2,4})$";
@@ -80,15 +80,15 @@ namespace MintaXAF.Module.BusinessObjects.Base
         }
 
         #region Action
-        [Action(Caption ="Unuse",TargetObjectsCriteria ="UseFlag = true",ImageName ="State_Validation_Invalid",AutoCommit =true)]
+        [Action(Caption ="Use",TargetObjectsCriteria ="UseFlag = false",ImageName ="State_Validation_Valid",AutoCommit =true)]
         public void ActionAvaiable()
         {
-            UseFlag = false;
+            UseFlag = true;
         }
-        [Action(Caption = "Use", TargetObjectsCriteria = "UseFlag = false", ImageName = "State_Validation_Valid", AutoCommit = true)]
+        [Action(Caption = "Unuse", TargetObjectsCriteria = "UseFlag = true", ImageName = "State_Validation_Invalid", AutoCommit = true)]
         public void ActionUnvaiable()
         {
-            UseFlag = true;
+            UseFlag = false;
         }
         #endregion
 
