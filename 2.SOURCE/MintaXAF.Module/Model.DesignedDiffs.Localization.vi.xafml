@@ -26,6 +26,8 @@
     <Class Name="MintaXAF.Module.BusinessObjects.Department" Caption="Phòng/Ban">
       <OwnMembers>
         <Member Name="BranchCollection" Caption="D/s Hội sở/Chi nhánh" />
+        <Member Name="DepartmentChildren" Caption="Phòng/Ban trực thuộc" />
+        <Member Name="DepartmentParent" Caption="Trực thuộc Phòng/Ban" />
         <Member Name="EmployeeCollection" Caption="D/s Nhân viên" />
         <Member Name="PositionCollection" Caption="D/s Chức vụ" />
       </OwnMembers>
@@ -68,6 +70,16 @@
     </Items>
   </NavigationItems>
   <Views>
+    <DetailView Id="Department_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Department" Caption="Department" />
+            <LayoutGroup Id="MintaBaseObject" Caption="Tên" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="Employee_DetailView">
       <Layout>
         <LayoutGroup Id="Main">
@@ -75,9 +87,13 @@
             <LayoutGroup Id="Autoeeea3ce5-a618-4170-baba-8bcdd5dcc1b9" Caption="Autoeeea3ce5-a618-4170-baba-8bcdd5dcc1b9(3)">
               <LayoutGroup Id="Auto9419f509-54e4-42a3-93a9-2e183608d485" Caption="Auto9419f509-54e4-42a3-93a9-2e183608d485(4)">
                 <LayoutGroup Id="Auto83011154-394d-4dfc-bb84-1ad080b922f8" Caption="Auto83011154-394d-4dfc-bb84-1ad080b922f8(5)" />
-                <LayoutGroup Id="Auto7316e224-233e-4eea-aa63-7df54537574c" Caption="">
-                  <LayoutGroup Id="Auto9ceb3aa5-0bdf-4d12-8739-1b4190daff9a" Caption="" />
-                  <LayoutGroup Id="Autoca486fc4-c44d-43df-875a-ab48c2337d52" Caption="" />
+                <LayoutGroup Id="Auto51e8ea10-bb2b-4ea5-972e-3647ba4804ad" Caption="">
+                  <LayoutGroup Id="Auto2baea181-6f8f-434b-ae65-a84a6d5b1ac5" Caption="" />
+                  <LayoutGroup Id="Auto494eb0eb-5d75-4af1-bd05-e91af0e87e30" Caption="" />
+                </LayoutGroup>
+                <LayoutGroup Id="Auto7316e224-233e-4eea-aa63-7df54537574c" Caption="Auto7316e224-233e-4eea-aa63-7df54537574c(10)">
+                  <LayoutGroup Id="Auto9ceb3aa5-0bdf-4d12-8739-1b4190daff9a" Caption="Auto9ceb3aa5-0bdf-4d12-8739-1b4190daff9a(11)" />
+                  <LayoutGroup Id="Autoca486fc4-c44d-43df-875a-ab48c2337d52" Caption="Autoca486fc4-c44d-43df-875a-ab48c2337d52(14)" />
                 </LayoutGroup>
               </LayoutGroup>
             </LayoutGroup>

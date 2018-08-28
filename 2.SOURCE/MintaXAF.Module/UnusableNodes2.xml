@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Department_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Department">
+              <LayoutItem Id="Name" RelativeSize="45.762711864406782" Removed="True" />
+              <LayoutItem Id="Parent" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Children" RelativeSize="100" Removed="True">
+              <LayoutItem Id="Children" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Department_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Index="-1" />
+        <ColumnInfo Id="Parent" Index="-1" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

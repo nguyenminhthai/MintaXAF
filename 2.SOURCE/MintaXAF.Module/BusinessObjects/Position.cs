@@ -13,9 +13,6 @@ namespace MintaXAF.Module.BusinessObjects
             : base(session)
         {
         }
-
-        public bool IsManager { get => GetPropertyValue<bool>("IsManager"); set => SetPropertyValue("IsManager", value); }
-
         [Association("Departments-Positions")]
         public XPCollection<Department> Departments=> GetCollection<Department>("Departments");
         

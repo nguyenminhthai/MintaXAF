@@ -38,42 +38,39 @@
         <ColumnInfo Id="Email" Index="4" Width="44" />
       </Columns>
     </ListView>
-    <DetailView Id="Employee_DetailView">
+    <DetailView Id="Department_DetailView">
       <Layout>
-        <LayoutGroup Id="Main" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True" Removed="True">
-          <LayoutGroup Id="Autodab6b048-24c0-43a8-b502-9db0f072124b" ShowCaption="False" Direction="Vertical" Index="0" RelativeSize="52.41935483870968" IsNewNode="True">
-            <LayoutGroup Id="Autoeeea3ce5-a618-4170-baba-8bcdd5dcc1b9" ShowCaption="False" Direction="Horizontal" Index="0" RelativeSize="63.07692307692308" IsNewNode="True">
-              <LayoutGroup Id="Auto9419f509-54e4-42a3-93a9-2e183608d485" ShowCaption="False" Index="0" RelativeSize="72.34375" IsNewNode="True">
-                <LayoutGroup Id="Auto83011154-394d-4dfc-bb84-1ad080b922f8" ShowCaption="False" Direction="Horizontal" Index="0" RelativeSize="23.170731707317074" IsNewNode="True">
-                  <LayoutItem Id="FirstName" ViewItem="FirstName" Index="0" RelativeSize="27.645788336933045" IsNewNode="True" />
-                  <LayoutItem Id="MiddleName" ViewItem="MiddleName" Index="1" RelativeSize="27.429805615550755" IsNewNode="True" />
-                  <LayoutItem Id="LastName" ViewItem="LastName" Index="2" RelativeSize="44.9244060475162" IsNewNode="True" />
-                </LayoutGroup>
-                <LayoutItem Id="FullName" ViewItem="FullName" Index="1" RelativeSize="14.634146341463415" IsNewNode="True" />
-                <LayoutGroup Id="Auto7316e224-233e-4eea-aa63-7df54537574c" ShowCaption="False" Direction="Horizontal" Index="2" RelativeSize="29.26829268292683" IsNewNode="True">
-                  <LayoutGroup Id="Auto9ceb3aa5-0bdf-4d12-8739-1b4190daff9a" ShowCaption="False" Index="0" RelativeSize="49.892008639308855" IsNewNode="True">
-                    <LayoutItem Id="Birthday" ViewItem="Birthday" Index="0" RelativeSize="50" IsNewNode="True" />
-                    <LayoutItem Id="Position" ViewItem="Position" Index="1" RelativeSize="50" IsNewNode="True" />
-                  </LayoutGroup>
-                  <LayoutGroup Id="Autoca486fc4-c44d-43df-875a-ab48c2337d52" ShowCaption="False" Index="1" RelativeSize="50.107991360691145" IsNewNode="True">
-                    <LayoutItem Id="Sex" ViewItem="Sex" Index="0" RelativeSize="50" IsNewNode="True" />
-                    <LayoutItem Id="Department" ViewItem="Department" Index="1" RelativeSize="50" IsNewNode="True" />
-                  </LayoutGroup>
-                </LayoutGroup>
-                <LayoutItem Id="Manager" ViewItem="Manager" Index="3" RelativeSize="14.634146341463415" IsNewNode="True" />
-                <LayoutItem Id="Email" ViewItem="Email" Index="4" RelativeSize="18.292682926829269" IsNewNode="True" />
-              </LayoutGroup>
-              <LayoutItem Id="Photo" ShowCaption="False" ViewItem="Photo" Index="1" RelativeSize="27.65625" IsNewNode="True" />
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="12.252964426877471">
+            <LayoutGroup Id="Department" RelativeSize="100">
+              <LayoutItem Id="DepartmentParent" RelativeSize="51.612903225806448" />
+              <LayoutItem Id="Title" ViewItem="Title" Index="1" RelativeSize="48.387096774193552" IsNewNode="True" />
             </LayoutGroup>
-            <LayoutItem Id="Notes" ViewItem="Notes" Index="1" RelativeSize="36.92307692307692" IsNewNode="True" />
+            <LayoutGroup Id="MintaBaseObject" RelativeSize="83.854166666666671" Direction="Horizontal" Removed="True">
+              <LayoutItem Id="Title" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="ChangeHistory_Group" ShowCaption="True" Index="1" RelativeSize="47.58064516129032" IsNewNode="True">
-            <LayoutItem Id="ChangeHistory" ViewItem="ChangeHistory" Index="0" RelativeSize="100" IsNewNode="True" />
-          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="87.747035573122531">
+            <LayoutGroup Id="BranchCollection" RelativeSize="100">
+              <LayoutItem Id="BranchCollection" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="EmployeeCollection" RelativeSize="100">
+              <LayoutItem Id="EmployeeCollection" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="PositionCollection" RelativeSize="100">
+              <LayoutItem Id="PositionCollection" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="DepartmentChildren" RelativeSize="100">
+              <LayoutItem Id="DepartmentChildren" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" RelativeSize="100" Index="4">
+              <LayoutItem Id="ChangeHistory" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Employee_ListView">
+    <ListView Id="Department_EmployeeCollection_ListView">
       <Columns>
         <ColumnInfo Id="FirstName" Index="-1" />
         <ColumnInfo Id="LastName" Index="-1" />
@@ -85,7 +82,82 @@
         <ColumnInfo Id="Position" Index="1" />
         <ColumnInfo Id="Birthday" Index="2" />
         <ColumnInfo Id="Sex" Index="3" />
-        <ColumnInfo Id="Department" Index="4" SortOrder="Ascending" GroupIndex="0" />
+        <ColumnInfo Id="Email" Index="4" />
+      </Columns>
+    </ListView>
+    <ListView Id="Department_ListView">
+      <Columns>
+        <ColumnInfo Id="Title" Index="0" Width="38" />
+        <ColumnInfo Id="DepartmentParent" Index="1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True" Removed="True">
+          <LayoutGroup Id="Autodab6b048-24c0-43a8-b502-9db0f072124b" ShowCaption="False" Direction="Vertical" Index="0" RelativeSize="52.41935483870968" IsNewNode="True">
+            <LayoutGroup Id="Autoeeea3ce5-a618-4170-baba-8bcdd5dcc1b9" ShowCaption="False" Direction="Horizontal" Index="0" RelativeSize="61.153846153846153" IsNewNode="True">
+              <LayoutGroup Id="Auto9419f509-54e4-42a3-93a9-2e183608d485" ShowCaption="False" Index="0" RelativeSize="72.231686541737645" IsNewNode="True">
+                <LayoutGroup Id="Auto83011154-394d-4dfc-bb84-1ad080b922f8" ShowCaption="False" Direction="Horizontal" Index="0" RelativeSize="23.89937106918239" IsNewNode="True">
+                  <LayoutItem Id="FirstName" ViewItem="FirstName" Index="0" RelativeSize="29.716981132075471" IsNewNode="True" />
+                  <LayoutItem Id="MiddleName" ViewItem="MiddleName" Index="1" RelativeSize="28.537735849056602" IsNewNode="True" />
+                  <LayoutItem Id="LastName" ViewItem="LastName" Index="2" RelativeSize="41.745283018867923" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="FullName" ViewItem="FullName" Index="1" RelativeSize="15.09433962264151" IsNewNode="True" />
+                <LayoutGroup Id="Auto51e8ea10-bb2b-4ea5-972e-3647ba4804ad" ShowCaption="False" Direction="Horizontal" Index="2" RelativeSize="30.188679245283019" IsNewNode="True">
+                  <LayoutGroup Id="Auto2baea181-6f8f-434b-ae65-a84a6d5b1ac5" ShowCaption="False" Index="0" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="Birthday" ViewItem="Birthday" Index="0" RelativeSize="50" IsNewNode="True" />
+                    <LayoutItem Id="Department" ViewItem="Department" Index="1" RelativeSize="50" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto494eb0eb-5d75-4af1-bd05-e91af0e87e30" ShowCaption="False" Index="1" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="Sex" ViewItem="Sex" Index="0" RelativeSize="50" IsNewNode="True" />
+                    <LayoutItem Id="Position" ViewItem="Position" Index="1" RelativeSize="50" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="Manager" ViewItem="Manager" Index="3" RelativeSize="15.09433962264151" IsNewNode="True" />
+                <LayoutItem Id="Email" ViewItem="Email" Index="4" RelativeSize="15.09433962264151" IsNewNode="True" />
+                <LayoutGroup Id="Auto7316e224-233e-4eea-aa63-7df54537574c" ShowCaption="False" Direction="Horizontal" Index="5" RelativeSize="0.62893081761006286" IsNewNode="True">
+                  <LayoutGroup Id="Auto9ceb3aa5-0bdf-4d12-8739-1b4190daff9a" ShowCaption="False" Direction="Horizontal" Index="0" RelativeSize="58.254716981132077" IsNewNode="True" />
+                  <LayoutGroup Id="Autoca486fc4-c44d-43df-875a-ab48c2337d52" ShowCaption="False" Direction="Horizontal" Index="1" RelativeSize="41.745283018867923" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="Photo" ShowCaption="False" ViewItem="Photo" Index="1" RelativeSize="27.768313458262352" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutItem Id="Notes" ViewItem="Notes" Index="1" RelativeSize="38.846153846153847" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="ChangeHistory_Group" ShowCaption="True" Index="1" RelativeSize="47.58064516129032" IsNewNode="True">
+            <LayoutItem Id="ChangeHistory" ViewItem="ChangeHistory" Index="0" RelativeSize="100" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Employee_JuniorEmployees_ListView">
+      <Columns>
+        <ColumnInfo Id="FirstName" Index="-1" />
+        <ColumnInfo Id="LastName" Index="-1" />
+        <ColumnInfo Id="MiddleName" Index="-1" />
+        <ColumnInfo Id="Photo" Index="-1" />
+        <ColumnInfo Id="Title" Index="-1" />
+        <ColumnInfo Id="FullName" Index="0" />
+        <ColumnInfo Id="Birthday" Index="1" />
+        <ColumnInfo Id="Sex" Index="2" />
+        <ColumnInfo Id="Email" Index="3" />
+        <ColumnInfo Id="Department" Index="4" />
+        <ColumnInfo Id="Position" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="Employee_ListView" IsGroupPanelVisible="False">
+      <Columns>
+        <ColumnInfo Id="FirstName" Index="-1" />
+        <ColumnInfo Id="LastName" Index="-1" />
+        <ColumnInfo Id="Manager" Index="-1" />
+        <ColumnInfo Id="MiddleName" Index="-1" />
+        <ColumnInfo Id="Photo" Index="-1" />
+        <ColumnInfo Id="Title" Index="-1" />
+        <ColumnInfo Id="Department" Index="0" SortOrder="Ascending" GroupIndex="0" />
+        <ColumnInfo Id="FullName" Index="1" />
+        <ColumnInfo Id="Position" Index="2" />
+        <ColumnInfo Id="Birthday" Index="3" />
+        <ColumnInfo Id="Sex" Index="4" />
         <ColumnInfo Id="Email" Index="5" />
       </Columns>
     </ListView>

@@ -1,21 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DevExpress.Data.Filtering;
-using DevExpress.ExpressApp;
-using DevExpress.ExpressApp.Actions;
-using DevExpress.ExpressApp.Editors;
-using DevExpress.ExpressApp.Layout;
-using DevExpress.ExpressApp.Model.NodeGenerators;
-using DevExpress.ExpressApp.SystemModule;
-using DevExpress.ExpressApp.Templates;
-using DevExpress.ExpressApp.Utils;
+﻿using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Web.Editors.ASPx;
 using DevExpress.ExpressApp.Win.Editors;
-using DevExpress.Persistent.Base;
-using DevExpress.Persistent.Validation;
 using DevExpress.XtraGrid.Views.Grid;
+using System;
 
 namespace MintaXAF.Module.Controllers
 {
@@ -62,6 +49,9 @@ namespace MintaXAF.Module.Controllers
                 #region Group Format Display
                 webListEditor.Grid.Settings.GroupFormat = "{1}";
                 #endregion
+                webListEditor.Grid.DataBound += delegate (object sender, EventArgs e) {
+                    ((DevExpress.Web.ASPxGridView)sender).ExpandAll();
+                };
             }
             #endregion
         }

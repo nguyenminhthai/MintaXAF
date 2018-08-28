@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Employee_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Index="-1" />
+        <ColumnInfo Id="Parent" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Employee_JuniorEmployees_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Index="-1" />
+        <ColumnInfo Id="Parent" Index="-1" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

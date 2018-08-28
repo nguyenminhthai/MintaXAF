@@ -5,20 +5,21 @@ using DevExpress.Persistent.Validation;
 using MintaXAF.Module.BusinessObjects.Base;
 using DevExpress.Persistent.Base.General;
 using DevExpress.ExpressApp.Filtering;
+using System.ComponentModel;
 
 namespace MintaXAF.Module.BusinessObjects
 {
-    [DefaultClassOptions]    
+    [DefaultClassOptions]
     [NavigationItem("Dictionary")]
     [ImageName("BO_Employee")]
-    public class Employee : MintaBaseObject,IPerson
+    public class Employee : MintaBaseObject, IPerson
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
         public Employee(Session session)
             : base(session)
         {
         }
         public override string Title { get => FullName; set => base.Title = FullName; }
-        
+
         #region Person
         public string FirstName { get => GetPropertyValue<string>("FirstName"); set => SetPropertyValue("FirstName", value); }
         public string LastName { get => GetPropertyValue<string>("LastName"); set => SetPropertyValue("LastName", value); }
@@ -38,14 +39,10 @@ namespace MintaXAF.Module.BusinessObjects
 
         public Sex Sex { get => GetPropertyValue<Sex>("Sex"); set => SetPropertyValue("Sex", value); }
 
-        [DataSourceProperty("Department.EmployeeCollection")]
-        [DataSourceCriteria("Oid != '@This.Oid' AND Position.IsManager=True")]
-        public Employee Manager { get => GetPropertyValue<Employee>("Manager"); set => SetPropertyValue("Manager", value); }
-
         [ImageEditor(ListViewImageEditorCustomHeight = 75, DetailViewImageEditorFixedHeight = 150)]
         public byte[] Photo { get; set; }
 
-        
+
         [RuleRegularExpression(DefaultContexts.Save, EmailRegularExpression, CustomMessageTemplate = "Invalid email format!")]
         public string Email { get => GetPropertyValue<string>("Email"); set => SetPropertyValue("Email", value); }
 
@@ -53,11 +50,23 @@ namespace MintaXAF.Module.BusinessObjects
         [RuleRequiredField(DefaultContexts.Save)]
         public Department Department { get => GetPropertyValue<Department>("Department"); set => SetPropertyValue("Department", value); }
 
+        [DataSourceProperty("Department.PositionCollection")]
         public Position Position { get => GetPropertyValue<Position>("Position"); set => SetPropertyValue("Position", value); }
 
         [Size(4096)]
         public string Notes { get => GetPropertyValue<string>("Notes"); set => SetPropertyValue("Notes", value); }
 
+        [DataSourceProperty("Department.EmployeeCollection")]
+        [DataSourceCriteria("Oid != '@This.Oid'")]
+        [Association("Manager-Employee")]        
+        public Employee Manager { get => GetPropertyValue<Employee>("Manager"); set => SetPropertyValue("Manager", value); }
+
+        [Association("Manager-Employee")]        
+        public XPCollection<Employee> JuniorEmployees
+        {
+            get { return GetCollection<Employee>("JuniorEmployees"); }
+        }
+        
         public override void AfterConstruction()
         {
             base.AfterConstruction();

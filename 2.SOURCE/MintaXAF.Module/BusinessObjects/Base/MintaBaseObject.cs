@@ -6,6 +6,7 @@ using System.ComponentModel;
 using DevExpress.ExpressApp.SystemModule;
 using DevExpress.ExpressApp.ConditionalAppearance;
 using System.Drawing;
+using DevExpress.Persistent.Base.General;
 
 namespace MintaXAF.Module.BusinessObjects.Base
 {
@@ -29,7 +30,7 @@ namespace MintaXAF.Module.BusinessObjects.Base
         [Index(-1)]
         [VisibleInDetailView(true)]
         [VisibleInListView(true)]
-        [RuleRequiredField(DefaultContexts.Save)]
+        [RuleRequiredField(DefaultContexts.Save)]        
         public virtual string Title {
             get => GetPropertyValue<string>("Title");
             set => SetPropertyValue("Title", value);
@@ -93,4 +94,5 @@ namespace MintaXAF.Module.BusinessObjects.Base
         #endregion
 
     }
+
 }
