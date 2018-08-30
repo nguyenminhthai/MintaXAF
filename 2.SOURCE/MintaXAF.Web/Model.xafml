@@ -17,7 +17,7 @@
           </Item>
         </Items>
       </Item>
-      <Item Id="Mydetails" ObjectKey="@CurrentUserID" Caption="My Details" ViewId="PermissionPolicyUser_DetailView" />
+      <Item Id="Mydetails" ObjectKey="@CurrentUserID" Caption="My Details" ViewId="PermissionPolicyUser_DetailView" Removed="True" />
     </Items>
   </NavigationItems>
   <SchemaModules>

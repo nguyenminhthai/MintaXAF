@@ -125,9 +125,19 @@
     <Compile Include="BusinessObjects\Employee.cs" />
     <Compile Include="BusinessObjects\Position.cs" />
     <Compile Include="BusinessObjects\Province.cs" />
+    <Compile Include="Controllers\CustomizeDetailViewController.cs" />
+    <Compile Include="Controllers\CustomizeDetailViewController.Designer.cs">
+      <DependentUpon>CustomizeDetailViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\CustomizeListViewController.cs" />
     <Compile Include="Controllers\CustomizeListViewController.Designer.cs">
       <DependentUpon>CustomizeListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CustomizeViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CustomizeViewController.Designer.cs">
+      <DependentUpon>CustomizeViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\SwitchLanguageLogonController.cs">
       <SubType>Component</SubType>
