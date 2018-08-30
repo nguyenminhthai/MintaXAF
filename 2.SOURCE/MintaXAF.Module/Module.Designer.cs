@@ -31,6 +31,16 @@
             this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.BaseObject));
             this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.AuditDataItemPersistent));
             this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.AuditedObjectWeakReference));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyRole));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Xpo.XPCustomObject));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Xpo.XPBaseObject));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Xpo.PersistentBase));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyRoleBase));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyTypePermissionObject));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyNavigationPermissionObject));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyMemberPermissionsObject));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyObjectPermissionsObject));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.SystemModule.SystemModule));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.AuditTrail.AuditTrailModule));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.ConditionalAppearance.ConditionalAppearanceModule));

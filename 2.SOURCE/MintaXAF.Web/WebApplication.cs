@@ -21,6 +21,8 @@ namespace MintaXAF.Web {
         private DevExpress.ExpressApp.AuditTrail.AuditTrailModule auditTrailModule;
         private DevExpress.ExpressApp.ConditionalAppearance.ConditionalAppearanceModule conditionalAppearanceModule;
         private DevExpress.ExpressApp.Validation.ValidationModule validationModule;
+        private DevExpress.ExpressApp.TreeListEditors.TreeListEditorsModuleBase treeListEditorsModuleBase1;
+        private DevExpress.ExpressApp.TreeListEditors.Web.TreeListEditorsAspNetModule treeListEditorsAspNetModule1;
         private DevExpress.ExpressApp.Validation.Web.ValidationAspNetModule validationAspNetModule;
 
         #region Default XAF configuration options (https://www.devexpress.com/kb=T501418)
@@ -90,31 +92,34 @@ namespace MintaXAF.Web {
             this.module4 = new MintaXAF.Module.Web.MintaXAFAspNetModule();
             this.securityModule1 = new DevExpress.ExpressApp.Security.SecurityModule();
             this.securityStrategyComplex1 = new DevExpress.ExpressApp.Security.SecurityStrategyComplex();
-            this.securityStrategyComplex1.SupportNavigationPermissionsForTypes = false;
             this.authenticationStandard1 = new DevExpress.ExpressApp.Security.AuthenticationStandard();
             this.auditTrailModule = new DevExpress.ExpressApp.AuditTrail.AuditTrailModule();
             this.conditionalAppearanceModule = new DevExpress.ExpressApp.ConditionalAppearance.ConditionalAppearanceModule();
             this.validationModule = new DevExpress.ExpressApp.Validation.ValidationModule();
             this.validationAspNetModule = new DevExpress.ExpressApp.Validation.Web.ValidationAspNetModule();
+            this.treeListEditorsModuleBase1 = new DevExpress.ExpressApp.TreeListEditors.TreeListEditorsModuleBase();
+            this.treeListEditorsAspNetModule1 = new DevExpress.ExpressApp.TreeListEditors.Web.TreeListEditorsAspNetModule();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // securityStrategyComplex1
             // 
             this.securityStrategyComplex1.Authentication = this.authenticationStandard1;
             this.securityStrategyComplex1.RoleType = typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyRole);
+            this.securityStrategyComplex1.SupportNavigationPermissionsForTypes = false;
             this.securityStrategyComplex1.UserType = typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser);
-            // 
-            // securityModule1
-            // 
-            this.securityModule1.UserType = typeof(DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser);
             // 
             // authenticationStandard1
             // 
             this.authenticationStandard1.LogonParametersType = typeof(DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters);
-            //
+            // 
             // auditTrailModule
-            //
+            // 
             this.auditTrailModule.AuditDataItemPersistentType = typeof(DevExpress.Persistent.BaseImpl.AuditDataItemPersistent);
+            // 
+            // validationModule
+            // 
+            this.validationModule.AllowValidationDetailsAccess = true;
+            this.validationModule.IgnoreWarningAndInformationRules = false;
             // 
             // MintaXAFAspNetApplication
             // 
@@ -122,14 +127,16 @@ namespace MintaXAF.Web {
             this.CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
             this.Modules.Add(this.module1);
             this.Modules.Add(this.module2);
-            this.Modules.Add(this.module3);
-            this.Modules.Add(this.module4);
-            this.Modules.Add(this.securityModule1);
-            this.Security = this.securityStrategyComplex1;
             this.Modules.Add(this.auditTrailModule);
             this.Modules.Add(this.conditionalAppearanceModule);
             this.Modules.Add(this.validationModule);
+            this.Modules.Add(this.treeListEditorsModuleBase1);
+            this.Modules.Add(this.module3);
             this.Modules.Add(this.validationAspNetModule);
+            this.Modules.Add(this.treeListEditorsAspNetModule1);
+            this.Modules.Add(this.module4);
+            this.Modules.Add(this.securityModule1);
+            this.Security = this.securityStrategyComplex1;
             this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.MintaXAFAspNetApplication_DatabaseVersionMismatch);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

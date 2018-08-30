@@ -5,6 +5,21 @@
       <Action Id="SwitchLanguageLogon" IsPostBackRequired="True" />
     </Actions>
   </ActionDesign>
+  <NavigationItems>
+    <Items>
+      <Item Id="Administrator">
+        <Items>
+          <Item Id="UserManagement">
+            <Items>
+              <Item Id="User" ViewId="PermissionPolicyUser_ListView" />
+              <Item Id="UserGroup" ViewId="PermissionPolicyRole_ListView" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Mydetails" ObjectKey="@CurrentUserID" Caption="My Details" ViewId="PermissionPolicyUser_DetailView" />
+    </Items>
+  </NavigationItems>
   <SchemaModules>
     <SchemaModule Name="SystemAspNetModule" Version="18.1.3.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="18.1.3.0" IsNewNode="True" />

@@ -26,8 +26,7 @@ namespace MintaXAF.Module.BusinessObjects.Base
             : base(session)
         {
         }
-        
-        [Index(-1)]
+        [Index(0)]
         [VisibleInDetailView(true)]
         [VisibleInListView(true)]
         [RuleRequiredField(DefaultContexts.Save)]        
@@ -47,6 +46,8 @@ namespace MintaXAF.Module.BusinessObjects.Base
 
         // Audit change log
         private XPCollection<AuditDataItemPersistent> changeHistory;
+        // Phải là Role Administrator thì mới hiển thị Tab ChangeHistory
+        [Appearance("IsRoleAdministratorEnableHistory", AppearanceItemType = "ViewItem", TargetItems = "ChangeHistory", Visibility = DevExpress.ExpressApp.Editors.ViewItemVisibility.Hide, Context = "DetailView", Criteria = "not IsCurrentUserInRole('Administrators')")]
         public XPCollection<AuditDataItemPersistent> ChangeHistory
         {
             get

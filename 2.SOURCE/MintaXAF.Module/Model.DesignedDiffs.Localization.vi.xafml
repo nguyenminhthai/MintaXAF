@@ -23,6 +23,14 @@
         <Member Name="DepartmentCollection" Caption="D/s Phòng/Ban" />
       </OwnMembers>
     </Class>
+    <Class Name="MintaXAF.Module.BusinessObjects.Commune" Caption="Xã/Phường">
+      <OwnMembers>
+        <Member Name="Code" Caption="Mã" />
+        <Member Name="District" Caption="Trực thuộc Quận/Huyện" />
+        <Member Name="FullNameWithPath" Caption="Địa chỉ đầy đủ" />
+        <Member Name="Province" Caption="Trực thuộc Tỉnh/Thành phố" />
+      </OwnMembers>
+    </Class>
     <Class Name="MintaXAF.Module.BusinessObjects.Department" Caption="Phòng/Ban">
       <OwnMembers>
         <Member Name="BranchCollection" Caption="D/s Hội sở/Chi nhánh" />
@@ -30,6 +38,14 @@
         <Member Name="DepartmentParent" Caption="Trực thuộc Phòng/Ban" />
         <Member Name="EmployeeCollection" Caption="D/s Nhân viên" />
         <Member Name="PositionCollection" Caption="D/s Chức vụ" />
+      </OwnMembers>
+    </Class>
+    <Class Name="MintaXAF.Module.BusinessObjects.District" Caption="Quận/Huyện">
+      <OwnMembers>
+        <Member Name="Code" Caption="Mã" />
+        <Member Name="Communes" Caption="Xã/Phường trực thuộc" />
+        <Member Name="FullNameWithPath" Caption="Địa chỉ đầy đủ" />
+        <Member Name="Province" Caption="Trực thuộc Tỉnh/Thành phố" />
       </OwnMembers>
     </Class>
     <Class Name="MintaXAF.Module.BusinessObjects.Employee" Caption="Nhân viên">
@@ -52,6 +68,12 @@
         <Member Name="Departments" Caption="D/s Phòng/Ban" />
       </OwnMembers>
     </Class>
+    <Class Name="MintaXAF.Module.BusinessObjects.Province" Caption="Tỉnh/Thành phố">
+      <OwnMembers>
+        <Member Name="Code" Caption="Mã" />
+        <Member Name="Districts" Caption="Quận/Huyện trực thuộc" />
+      </OwnMembers>
+    </Class>
   </BOModel>
   <Localization>
     <LocalizationGroup Name="DialogButtons">
@@ -66,7 +88,19 @@
   </Localization>
   <NavigationItems>
     <Items>
+      <Item Id="Administrator" Caption="Quản trị">
+        <Items>
+          <Item Id="Location" Caption="Địa danh" />
+          <Item Id="UserManagement" Caption="Phân quyền người dùng">
+            <Items>
+              <Item Id="User" Caption="Người dùng" />
+              <Item Id="UserGroup" Caption="Phân quyền" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
       <Item Id="Dictionary" Caption="Danh mục" />
+      <Item Id="Mydetails" Caption="Thông tin của tôi" />
     </Items>
   </NavigationItems>
   <Views>

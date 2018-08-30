@@ -3,6 +3,7 @@ using DevExpress.Persistent.Base;
 using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.Validation;
 using MintaXAF.Module.BusinessObjects.Base;
+using System;
 
 namespace MintaXAF.Module.BusinessObjects
 {

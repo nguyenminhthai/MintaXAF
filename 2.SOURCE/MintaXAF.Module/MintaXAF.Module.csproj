@@ -95,6 +95,10 @@
     <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <Name>System</Name>
       <Private>False</Private>
@@ -115,9 +119,12 @@
   <ItemGroup>
     <Compile Include="BusinessObjects\Base\MintaBaseObject.cs" />
     <Compile Include="BusinessObjects\Branch.cs" />
+    <Compile Include="BusinessObjects\Commune.cs" />
     <Compile Include="BusinessObjects\Department.cs" />
+    <Compile Include="BusinessObjects\District.cs" />
     <Compile Include="BusinessObjects\Employee.cs" />
     <Compile Include="BusinessObjects\Position.cs" />
+    <Compile Include="BusinessObjects\Province.cs" />
     <Compile Include="Controllers\CustomizeListViewController.cs" />
     <Compile Include="Controllers\CustomizeListViewController.Designer.cs">
       <DependentUpon>CustomizeListViewController.cs</DependentUpon>
@@ -148,6 +155,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DatabaseUpdate\Data\Commune.json" />
+    <EmbeddedResource Include="DatabaseUpdate\Data\District.json" />
+    <EmbeddedResource Include="DatabaseUpdate\Data\Province.json" />
     <None Include="DatabaseUpdate\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +176,7 @@
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +191,10 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="UnusableNodes2.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes3.xml">
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
       <SubType>Designer</SubType>
     </None>

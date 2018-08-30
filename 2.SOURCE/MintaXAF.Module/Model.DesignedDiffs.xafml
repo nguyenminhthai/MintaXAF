@@ -1,5 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="MintaXAF" PreferredLanguage="vi" Logo="Logo_Company">
+  <BOModel>
+    <Class Name="MintaXAF.Module.BusinessObjects.Branch" ImageName="ModelEditor_Action_Modules" />
+    <Class Name="MintaXAF.Module.BusinessObjects.Commune" ImageName="BO_Address" />
+    <Class Name="MintaXAF.Module.BusinessObjects.District" ImageName="BO_Address" />
+    <Class Name="MintaXAF.Module.BusinessObjects.Province" ImageName="BO_Address" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Administrator" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Location" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="Commune_ListView" ViewId="Commune_ListView" ObjectKey="" IsNewNode="True" />
+              <Item Id="District_ListView" ViewId="District_ListView" ObjectKey="" IsNewNode="True" />
+              <Item Id="Province_ListView" ViewId="Province_ListView" ObjectKey="" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="UserManagement" IsNewNode="True">
+            <Items IsNewNode="True">
+              <Item Id="User" ImageName="BO_User" Index="0" ViewId="PermissionPolicyUser_ListView" IsNewNode="True" />
+              <Item Id="UserGroup" ImageName="BO_Person" ViewId="PermissionPolicyRole_ListView" IsNewNode="True" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Default" Removed="True">
+        <Items>
+          <Item Id="Commune_ListView" Removed="True" />
+          <Item Id="District_ListView" Removed="True" />
+          <Item Id="Province_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Mydetails" ViewId="PermissionPolicyUser_DetailView" ObjectKey="@CurrentUserID" IsNewNode="True" />
+    </Items>
+  </NavigationItems>
   <Options EnableFriendlyUrl="True">
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
@@ -36,6 +71,15 @@
         <ColumnInfo Id="Telephone" Index="2" />
         <ColumnInfo Id="Fax" Index="3" Width="38" />
         <ColumnInfo Id="Email" Index="4" Width="44" />
+      </Columns>
+    </ListView>
+    <ListView Id="Commune_ListView" IsGroupPanelVisible="True">
+      <Columns>
+        <ColumnInfo Id="Code" Index="0" />
+        <ColumnInfo Id="Province" SortOrder="Ascending" GroupIndex="0" Index="1" Width="115" />
+        <ColumnInfo Id="Title" Index="2" />
+        <ColumnInfo Id="FullNameWithPath" Index="3" />
+        <ColumnInfo Id="District" SortOrder="Ascending" GroupIndex="1" Index="4" />
       </Columns>
     </ListView>
     <DetailView Id="Department_DetailView">
@@ -89,6 +133,13 @@
       <Columns>
         <ColumnInfo Id="Title" Index="0" Width="38" />
         <ColumnInfo Id="DepartmentParent" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="District_ListView">
+      <Columns>
+        <ColumnInfo Id="Code" Index="0" />
+        <ColumnInfo Id="Title" Index="1" />
+        <ColumnInfo Id="Province" SortOrder="Ascending" GroupIndex="0" />
       </Columns>
     </ListView>
     <DetailView Id="Employee_DetailView">
@@ -159,6 +210,18 @@
         <ColumnInfo Id="Birthday" Index="3" />
         <ColumnInfo Id="Sex" Index="4" />
         <ColumnInfo Id="Email" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="Province_Districts_ListView">
+      <Columns>
+        <ColumnInfo Id="Code" Index="0" />
+        <ColumnInfo Id="Title" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Province_ListView">
+      <Columns>
+        <ColumnInfo Id="Code" Index="0" />
+        <ColumnInfo Id="Title" Index="1" />
       </Columns>
     </ListView>
   </Views>
