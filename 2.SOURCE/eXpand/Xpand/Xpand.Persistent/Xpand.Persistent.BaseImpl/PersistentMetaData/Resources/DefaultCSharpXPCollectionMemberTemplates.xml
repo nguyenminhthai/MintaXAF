@@ -1,7 +1,0 @@
-﻿    $TYPEATTRIBUTES$
-    public XPCollection<$PROPERTYTYPE$> $PROPERTYNAME$ {
-        get { 
-            $INJECTCODE$
-            return GetCollection<$PROPERTYTYPE$>("$PROPERTYNAME$"); 
-        }
-    }
